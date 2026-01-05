@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>Ambientes - Bf Casa Home Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="splash-overlay" id="splash-inicial">
+        <div class="splash-card">
+            <h1 class="splash-titulo">Casa Bem Vivida Bf casa</h1>
+            <p class="splash-texto">
+                Conheça nossa linha de cama mesa e banho<br>
+                com a Linha Home Pro Conforto que só a<br>
+                Bf casa oferece.
+            </p>
+            <button class="btn-splash" onclick="fecharSplash()">Explore agora</button>
+        </div>
+    </div>
+
+    <div class="overlay-sombra"></div>
+
+    <div class="menu-topo">
+        <button class="menu-item ativo" id="btn-quarto" onclick="mudarComodo('quarto')">Quarto</button>
+        <button class="menu-item" id="btn-banheiro" onclick="mudarComodo('banheiro')">Banheiro</button>
+    </div>
+
+    <a href="https://bfcasa.com.br/" class="btn-geral" target="_blank" rel="noopener noreferrer">Compre já</a>
+
+    <div class="banner-container" id="palco-3d">
+        <div class="threed-wrapper" id="elemento-que-gira">
+            <img class="bg-img" id="bg-quarto" src="" alt="Quarto" />
+            <img class="bg-img" id="bg-banheiro" src="" alt="Banheiro" />
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="modal-principal" onclick="fecharModal()">
+        <div class="modal-card" onclick="event.stopPropagation()">
+            <div class="btn-close" onclick="fecharModal()">×</div>
+            <div class="modal-img-container">
+                <img src="" alt="Produto" class="modal-img" id="modal-img-alvo">
+            </div>
+            <div class="modal-content">
+                <h3 id="modal-titulo">Título do Produto</h3>
+                <p id="modal-desc">Descrição detalhada do produto.</p>
+                <a href="#" class="btn-comprar" id="modal-link" target="_blank" rel="noopener noreferrer"><span>→</span> COMPRE JÁ</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
